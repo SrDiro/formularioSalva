@@ -8,15 +8,64 @@ and open the template in the editor.
     Author     : Alumno
 */
 #tapas{
+    margin: 0 auto;
+    max-width: 840px;
     position: absolute;
     border: solid 1px;
+    left: 40%;      
 }
 
-#tapas > div{
+#platos{
+    margin: 0 auto;
+    max-width: 840px;
+    position: absolute;
+    border: solid 1px;
+    left: 40%;
+    top: 26%;
+}
+
+#bebidas{
+    margin: 0 auto;
+    max-width: 840px;
+    position: absolute;
+    border: solid 1px;
+    left: 40%;
+    top: 46%;
+}
+
+#iva{
+    margin: 0 auto;
+    min-width: 250.781px;
+    max-width: 840px;
+    position: absolute;
+    border: solid 1px;
+    left: 40%;
+    top: 77%;
+}
+
+
+#tapas > div, #platos > div, #bebidas > div, #iva{
     display: inline-block;
 }
 
-#tapas > div > *{
+p{
+    min-width: 110px;
+}
+
+#tapas > div > *, #platos > div > *, #bebidas > div > *, #iva > *{
     float: left;
     margin: 15px;
+}
+
+
+#total{
+    position: absolute;
+    left: 40%;
+    top: 82%;
+}
+
+#botonComprar{
+    position: absolute;
+    left: 45%;
+    top: 87%;
 }
