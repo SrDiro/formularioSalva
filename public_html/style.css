@@ -7,6 +7,11 @@ and open the template in the editor.
     Created on : 16-oct-2017, 13:33:41
     Author     : Alumno
 */
+
+* {
+box-sizing: border-box;
+}
+
 #tapas{
     margin: 0 auto;
     max-width: 840px;
@@ -21,7 +26,7 @@ and open the template in the editor.
     position: absolute;
     border: solid 1px;
     left: 40%;
-    top: 26%;
+    top: 36.5%;
 }
 
 #bebidas{
@@ -30,17 +35,17 @@ and open the template in the editor.
     position: absolute;
     border: solid 1px;
     left: 40%;
-    top: 46%;
+    top: 63%;
 }
 
 #iva{
     margin: 0 auto;
-    min-width: 250.781px;
+    min-width: 269px;
     max-width: 840px;
     position: absolute;
     border: solid 1px;
     left: 40%;
-    top: 77%;
+    top: 107.5%;
 }
 
 
@@ -61,11 +66,57 @@ p{
 #total{
     position: absolute;
     left: 40%;
-    top: 82%;
+    top: 112%;
 }
 
 #botonComprar{
     position: absolute;
     left: 45%;
-    top: 87%;
+    top: 117%;
+    margin-bottom: 5%;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border: solid 1px;
+}
+
+/* ZOOM IMAGES*/
+
+/*.zoomIt{
+    display:block!important;
+    -webkit-transition:-webkit-transform 1s ease-out;
+    -moz-transition:-moz-transform 1s ease-out;
+    -o-transition:-o-transform 1s ease-out;
+    -ms-transition:-ms-transform 1s ease-out;
+    transition:transform 1s ease-out;
+}
+.zoomIt:hover{
+    -moz-transform: scale(5);
+    -webkit-transform: scale(5);
+    -o-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+}*/
+
+/*MENU SCROLL*/
+
+/*#bigImage{
+    position: absolute;
+    top: 175px;
+    width: 500px;
+    height: 500px;
+    border: solid 1px;
+}*/
+
+#bigImage {
+	position:fixed;
+	z-index:1000;
+	top:250px;
+        left: 150px;
+	width:400px;
+        height: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
 }

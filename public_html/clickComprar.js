@@ -8,14 +8,39 @@ function comprar() {
     var precio = 0;
 
     var checkboxes = document.forms[0];
+    var res;
+    var pre;
+    var ivaParse = 0;
     
     for (var x = 0; x < checkboxes.length; x++) {
+        
         if (checkboxes[x].checked) {
-            var res = checkboxes[x].name.split(" ");
-            var pre = res[(res.length - 1)];
-        precio += parseFloat(pre);
+            
+            if (checkboxes[x].id !== "cb_iva") {
+                
+                res = checkboxes[x].name.split(" ");
+                pre = res[(res.length - 1)];
+                precio += parseFloat(pre);                
+                                
+            } else if (checkboxes[x].id === "cb_iva"){
+                res = checkboxes[x].name.split(" ");
+                pre = res[(res.length - 1)];
+                ivaParse = parseFloat(pre);                
+                precio = precio + (precio * (ivaParse/100));
+                
+            }                                
         }
     }
-
+    
+    precio = (Math.round(precio * 100) / 100).toFixed(2);
     document.getElementById("p_total").innerHTML = "TOTAL: " + precio + "€";
+    
+}
+
+function inImage(src){
+    document.getElementById("bigImage").style.backgroundImage = "url('" + src + "')";
+}
+
+function outImage(){
+    document.getElementById("bigImage").style.backgroundImage = "url('')";
 }
